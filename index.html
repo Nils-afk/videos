@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Wiedergabe</title>
+    <style>
+        /* Entfernt den Standard-Rand und macht die Seite vollflächig */
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Stellt sicher, dass das Video den gesamten Bildschirm abdeckt */
+        html, body {
+            height: 100%;
+            background-color: black;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Video passt sich an, ohne gestreckt zu werden */
+        }
+    </style>
 </head>
 <body>
-    <video width="100%" height="100%" controls autoplay>
+    <video autoplay controls>
         <source src="2024-09-27 22-41-26.mp4" type="video/mp4">
         Dein Browser unterstützt das Videoformat nicht.
     </video>
